@@ -14,9 +14,13 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "types": ["jest"],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@models/*": ["src/app/models/*"]
+    }
   }
 }

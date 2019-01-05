@@ -1,0 +1,23 @@
+<div>
+  <mat-toolbar
+    color="primary"
+    id="app-global-header"
+  >
+    <div fxLayout="row" fxLayoutAlign="start center">
+      <div
+        class="home"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+        routerLink="/"
+      >
+        <mat-icon class="home-icon">home</mat-icon>
+        {{ title }}
+      </div>
+      <ng-container *ngFor="let navRoute of navRoutes">
+        <button mat-button [routerLink]="navRoute.routerLink">
+          {{ navRoute.name }}
+        </button>
+      </ng-container>
+    </div>
+  </mat-toolbar>
+</div>

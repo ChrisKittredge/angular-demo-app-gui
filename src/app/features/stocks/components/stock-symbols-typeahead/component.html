@@ -1,0 +1,22 @@
+<div>
+  <form class="stock-symbols-typeahead__form">
+    <mat-form-field class="full-width">
+      <input
+        type="text"
+        placeholder="Search..."
+        matInput
+        matAutosize
+        [formControl]="formControl"
+        [matAutocomplete]="auto"
+      >
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let option of filteredSymbols | async"
+          [value]="option.symbol"
+        >
+          <b>{{ option.symbol }}</b> | {{ option.name }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+</div>

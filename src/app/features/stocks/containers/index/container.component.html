@@ -1,0 +1,18 @@
+<div class="stocks-container">
+  <mat-card>
+    <mat-card-header>
+      <div mat-card-avatar class="avatar">
+        <mat-icon class="stock-icon">show_chart</mat-icon>
+      </div>
+      <mat-card-title>Stocks</mat-card-title>
+      <mat-card-subtitle>Charts and Data</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="card-content-container">
+        <app-stock-symbols-typeahead
+          [symbols]="symbols$ | async"
+        ></app-stock-symbols-typeahead>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
