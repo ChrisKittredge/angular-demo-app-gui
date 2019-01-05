@@ -16,6 +16,8 @@ export const initialState = {
   symbols: [],
 };
 
+// Testing change for SSH
+
 export function stocksReducer(state = initialState, action: Actions) {
   switch (action.type) {
 
