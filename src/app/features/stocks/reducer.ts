@@ -9,7 +9,7 @@ export interface StocksState {
   isLoadingSymbols: boolean,
   symbols: IExTradingSymbol[],
 }
- 
+
 export const initialState = {
   isLoadingChartData: false,
   isLoadingSymbols: false,

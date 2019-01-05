@@ -1,11 +1,13 @@
-import { createSelector } from '@ngrx/store';
+import {
+  createSelector,
+  createFeatureSelector,
+} from '@ngrx/store';
 
-import { AppState } from 'src/app/app.state';
 import { STATE_NAME } from './consts';
+import { StocksState } from './reducer';
 
-
-export const getStocksState = createSelector(
-  (rootState: AppState) => rootState[STATE_NAME]
+export const getStocksState = createFeatureSelector<StocksState>(
+  STATE_NAME
 );
 
 export const getStockSymbols = createSelector(
