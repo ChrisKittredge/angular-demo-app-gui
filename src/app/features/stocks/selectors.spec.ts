@@ -1,12 +1,14 @@
 import {
+  iexTradingSymbolFactory,
+} from '@models/iexTrading/symbol/model.factory';
+
+import { STATE_NAME } from './consts';
+import {
   getStockSymbols,
   getStocksState,
 } from "./selectors";
 import { getMockState } from './state.mock.spec';
-import {
-  iexTradingSymbolFactory,
-} from '@models/iexTrading/symbol/model.factory';
-import { STATE_NAME } from './consts';
+
 
 describe('Stocks Selectors', () => {
   describe('getStocksState', () => {

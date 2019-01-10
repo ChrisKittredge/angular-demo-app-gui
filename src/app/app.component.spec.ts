@@ -2,8 +2,8 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { GlobalHeaderModule } from '@core/components/global-header/module';
 import { AppComponent } from './app.component';
-import { GlobalHeaderModule } from './core/components/global-header/module';
 
 xdescribe('AppComponent', () => {
   beforeEach(async(() => {

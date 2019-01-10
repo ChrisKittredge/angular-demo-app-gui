@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from "@angular/router";
 import { NgModule } from '@angular/core';
 
-import { StocksContainerComponent } from './containers/index/container.component';
 import { STOCKS_ROUTE_NAME } from './consts';
+import { StocksContainerComponent } from './containers/index/container.component';
 
 const routes: Routes = [
   {

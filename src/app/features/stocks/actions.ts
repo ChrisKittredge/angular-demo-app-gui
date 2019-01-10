@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { IExTradingSymbol } from 'src/app/models/iexTrading/symbol/model';
+import { IExTradingSymbol } from '@models/iexTrading/symbol/model';
  
 export enum ActionTypes {
   LoadStockChartData = '[Stocks] Load Stock Chart Data',

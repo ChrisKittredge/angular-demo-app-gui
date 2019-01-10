@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-import { BaseCrudRepo } from 'src/app/repos/baseCrudRepo/repo';
+import { BaseCrudRepo } from '@repos/baseCrudRepo/repo';
 
 export class BaseCrudService<T> {
 

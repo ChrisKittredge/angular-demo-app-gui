@@ -1,7 +1,9 @@
-import { IIExTradingSymbol } from 'src/app/models/iexTrading/symbol/model';
-import { BaseFetchRepo } from '../../baseFetchRepo';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+
+import { environment } from '@environments/environment';
+import { IIExTradingSymbol } from '@models/iexTrading/symbol/model';
+
+import { BaseFetchRepo } from '../../baseFetchRepo';
 
 export interface IExTradingSymbolJSON extends IIExTradingSymbol {};
 

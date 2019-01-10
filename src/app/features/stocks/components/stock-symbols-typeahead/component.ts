@@ -6,8 +6,9 @@ import {
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { startWith, map, debounceTime } from 'rxjs/operators';
-import { IExTradingSymbol } from 'src/app/models/iexTrading/symbol/model';
+import { startWith, map } from 'rxjs/operators';
+
+import { IExTradingSymbol } from '@models/iexTrading/symbol/model';
 
 @Component({
   selector: 'app-stock-symbols-typeahead',

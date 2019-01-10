@@ -20,7 +20,15 @@
       "dom"
     ],
     "paths": {
-      "@models/*": ["src/app/models/*"]
+      "@environments/*": ["src/environments/*"],
+      "@features/*": ["src/app/features/*"],
+      "@models/*": ["src/app/models/*"],
+      "@repos/*": ["src/app/core/repos/*"],
+      "@services/*": ["src/app/core/services/*"],
+      "@stores/*": ["src/app/stores/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@core/*": ["src/app/core/*"],
+      "@app/*": ["src/app/*"]
     }
   }
 }

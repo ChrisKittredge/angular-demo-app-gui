@@ -1,12 +1,8 @@
-import {
-  initialState,
-  stocksReducer,
-  StocksState,
-} from './reducer';
-import { UnknownAction } from '../../utils/testing/actions';
+import { UnknownAction } from '@utils/testing/actions';
 import {
   iexTradingSymbolFactory,
 } from '@models/iexTrading/symbol/model.factory';
+
 import {
   LoadStockSymbolsAction,
   LoadStockSymbolsFailureAction,
@@ -15,6 +11,11 @@ import {
   LoadStockChartDataSuccessAction,
   LoadStockChartDataFailureAction,
 } from './actions';
+import {
+  initialState,
+  stocksReducer,
+  StocksState,
+} from './reducer';
 
 describe('Stocks Reducer', () => {
   describe('unknown action', () => {

@@ -3,28 +3,34 @@ import { Action } from '@ngrx/store';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { map, switchMap, catchError, filter } from 'rxjs/operators';
-import { ActionTypes, LoadStockSymbolsAction, LoadStockSymbolsSuccessAction, LoadStockSymbolsFailureAction } from './actions';
-import { IExTradingSymbolsService } from 'src/app/services';
 import {
   RouterNavigatedAction,
   ROUTER_NAVIGATED,
 } from '@ngrx/router-store';
 
+import {
+  ActionTypes,
+  LoadStockSymbolsAction,
+  LoadStockSymbolsSuccessAction,
+  LoadStockSymbolsFailureAction,
+} from './actions';
+import { IExTradingSymbolsService } from '@services/index';
+
 @Injectable()
 export class StocksEffects {
 
   @Effect()
-  stocksRouteNavigated$: Observable<Action> = this.actions$.pipe(
+  stocksRouteNavigated$ = this.actions$.pipe(
     ofType<RouterNavigatedAction>(ROUTER_NAVIGATED),
     filter((action) => action.payload.event.url === '/stocks'),
     map(() => new LoadStockSymbolsAction())
   );
   
   @Effect()
-  loadStockSymbols$: Observable<Action> = this.actions$.pipe(
+  loadStockSymbols$ = this.actions$.pipe(
     ofType<LoadStockSymbolsAction>(ActionTypes.LoadStockSymbols),
     switchMap(() =>
-      this.iexTradingService.get().pipe(
+      this.symbolsService.get().pipe(
         map((symbols) =>
           new LoadStockSymbolsSuccessAction(symbols)
         ),
@@ -34,7 +40,7 @@ export class StocksEffects {
   );
 
   constructor(
-    public iexTradingService: IExTradingSymbolsService,
+    public symbolsService: IExTradingSymbolsService,
     private actions$: Actions,
   ) {}
 }

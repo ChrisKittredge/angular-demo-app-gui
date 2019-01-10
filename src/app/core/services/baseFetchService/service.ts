@@ -1,6 +1,6 @@
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { BaseFetchRepo } from 'src/app/repos/baseFetchRepo';
+import { BaseFetchRepo } from '@repos/baseFetchRepo';
 import { map } from 'rxjs/operators';
 
 interface ConstructableModel<IModel, IModelClass> {

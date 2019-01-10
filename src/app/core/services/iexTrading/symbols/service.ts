@@ -1,7 +1,8 @@
 import { BaseFetchService } from '../../baseFetchService';
 import { Injectable } from '@angular/core';
-import { IExTradingSymbolsRepo } from 'src/app/repos';
-import { IExTradingSymbol, IIExTradingSymbol } from 'src/app/models/iexTrading/symbol/model';
+
+import { IExTradingSymbol, IIExTradingSymbol } from '@models/iexTrading/symbol/model';
+import { IExTradingSymbolsRepo } from '@repos/index';
 
 @Injectable({ providedIn: 'root' })
 export class IExTradingSymbolsService extends BaseFetchService<

@@ -1,8 +1,9 @@
+import { IExTradingSymbol } from '@models/iexTrading/symbol/model';
+
 import {
   ActionTypes,
   Actions,
 } from './actions';
-import { IExTradingSymbol } from 'src/app/models/iexTrading/symbol/model';
 
 export interface StocksState {
   isLoadingChartData: boolean,

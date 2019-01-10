@@ -1,9 +1,11 @@
 import { TestBed, async } from '@angular/core/testing';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { GlobalHeaderComponent } from './component';
 import { Store } from '@ngrx/store';
-import { AppState } from 'src/app/app.state';
-import { MockStore } from 'src/app/utils/testing/mockStore';
+
+import { AppState } from '@app/app.state';
+import { MockStore } from '@utils/testing/mockStore';
+
+import { GlobalHeaderComponent } from './component';
 
 xdescribe('AppComponent', () => {
   let mockStore: MockStore<Partial<AppState>>;

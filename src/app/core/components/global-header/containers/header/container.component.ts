@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 
-import { AppState } from 'src/app/app.state';
+import { AppState } from '@app/app.state';
+
 import {
   getGlobalHeaderTitle,
   getNavRoutes,

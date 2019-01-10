@@ -4,14 +4,15 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { GlobalHeaderModule } from '@core/components/global-header/module';
+import { ReposModule } from '@repos/module';
+import { ServicesModule } from '@services/module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GlobalHeaderModule } from './core/components/global-header/module';
-import { ReposModule } from 'src/app/repos/module';
 import { reducers } from './app.state';
-import { ServicesModule } from './services/module';
 
 @NgModule({
   declarations: [AppComponent],
